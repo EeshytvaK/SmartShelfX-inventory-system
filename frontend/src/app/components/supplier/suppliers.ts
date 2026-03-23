@@ -155,7 +155,7 @@ export class SuppliersComponent implements OnInit {
   }
 
   openAdd() { this.isEditing = false; this.form = { name: '', email: '', phoneNumber: '', address: '', contactPerson: '' }; this.editingId = null; this.showModal = true; }
-  openEdit(s: any) { this.isEditing = true; this.editingId = s.id; this.form = { name: s.name, email: s.email, phoneNumber: s.phone, address: s.address, contactPerson: s.contactPerson }; this.showModal = true; }
+  openEdit(s: any) { this.isEditing = true; this.editingId = s.id; this.form = { name: s.name, email: s.email, phoneNumber: s.phoneNumber, address: s.address, contactPerson: s.contactPerson }; this.showModal = true; }
   closeModal() { this.showModal = false; this.errorMsg = ''; }
 
   save() {

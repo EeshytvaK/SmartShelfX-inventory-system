@@ -291,8 +291,10 @@ export class OrdersComponent implements OnInit {
     const payload = {
       vendorId: this.form.vendorId,
       notes: this.form.notes || null,
-      expectedDeliveryDate: this.form.expectedDeliveryDate || null,
-      items: this.form.items.filter((i: any) => i.productId).map((i: any) => ({
+      expectedDeliveryDate: this.form.expectedDeliveryDate
+        ? this.form.expectedDeliveryDate + 'T00:00:00'
+        : null,
+        items: this.form.items.filter((i: any) => i.productId).map((i: any) => ({
         productId: i.productId,
         orderedQuantity: Number(i.orderedQuantity),
         unitPrice: i.unitPrice ? Number(i.unitPrice) : null
